@@ -1,33 +1,67 @@
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import Login from './pages/Login/Login'
+import Home from './pages/Home/Home'
 import Register from './pages/Register/Register';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import Profile from './pages/Profile/Profile';
+import Navbar from './components/Navbar/Navbar';
+import Leftbar from './components/Leftbar/Leftbar';
+import Rightbar from './components/Rightbar/Rightbar';
+import {ProtectRoute} from './guards/ProtectRoute'
 
 
 function App() {
 
-
-  const router = createBrowserRouter([
-    {
-      path:'/',
-      element:<div>asdasdasdasd</div>
-    },
-    {
-      path: "/login",
-      element: <Login />
-    },
-    {
-      path:"register",
-      element:<Register/>
-    }
-  ])
+	const Layout = () => {
+		return (
+			<div>
+				<Navbar />
+				<div style={{ display: 'flex' }}>
+					<Leftbar />
+					<Outlet />
+					<Rightbar />
+				</div>
+			</div>
+		)
+	}
 
 
 
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  )
+	const router = createBrowserRouter([
+		{
+			path: '/',
+			element: (
+				<ProtectRoute>
+					<Layout />
+				</ProtectRoute>
+			),
+			children: [
+				{
+					path: '/',
+					element: <Home />
+				},
+				{
+					path: '/profile/:id',
+					element: <Profile />
+				}
+			]
+		},
+		{
+			path: "/login",
+			element: <Login />
+		},
+		{
+			path: "register",
+			element: <Register />
+		}
+	])
+
+
+
+	return (
+		<div>
+			<RouterProvider router={router} />
+		</div>
+	)
 }
 
 export default App;
