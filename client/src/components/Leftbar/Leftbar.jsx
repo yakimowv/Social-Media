@@ -50,6 +50,38 @@ export default function Leftbar() {
             <img src={Events} alt='Events img' />
             <span>Events</span>
           </div>
+          <div className='item'>
+            <img src={Gaming} alt='Gaming img' />
+            <span>Gaming</span>
+          </div>
+          <div className='item'>
+            <img src={Gallery} alt='Gallery img' />
+            <span>Gallery</span>
+          </div>
+          <div className='item'>
+            <img src={Videos} alt='Videos img' />
+            <span>Videos</span>
+          </div>
+          <div className='item'>
+            <img src={Messages} alt='Messages img' />
+            <span>Messages</span>
+          </div>
+        </div>
+        <hr/>
+        <div className="menu">
+        <span>Others</span>
+        <div className='item'>
+            <img src={Fund} alt='Fund img' />
+            <span>Fundralser</span>
+          </div>
+          <div className='item'>
+            <img src={Tutorials} alt='Tutorials img' />
+            <span>Tutorials</span>
+          </div>
+          <div className='item'>
+            <img src={Courses} alt='Courses img' />
+            <span>Courses</span>
+          </div>
         </div>
       </div>
     </div>

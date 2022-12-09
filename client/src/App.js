@@ -6,7 +6,7 @@ import Profile from './pages/Profile/Profile';
 import Navbar from './components/Navbar/Navbar';
 import Leftbar from './components/Leftbar/Leftbar';
 import Rightbar from './components/Rightbar/Rightbar';
-import {ProtectRoute} from './guards/ProtectRoute'
+import { ProtectRoute } from './guards/ProtectRoute'
 
 
 function App() {
@@ -17,7 +17,9 @@ function App() {
 				<Navbar />
 				<div style={{ display: 'flex' }}>
 					<Leftbar />
-					<Outlet />
+					<div style={{ flex: 6 }}>
+						<Outlet />
+					</div>
 					<Rightbar />
 				</div>
 			</div>
