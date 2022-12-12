@@ -1,8 +1,62 @@
-import React from 'react'
 import './Home.scss'
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <div className='home'>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+      <div>HOME</div>
+    </div>
   )
 }

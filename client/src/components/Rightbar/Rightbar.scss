@@ -1,10 +1,12 @@
+@import '../../style.scss';
 .rightbar{
+    @include themify($themes){
     flex: 3;
     position: sticky;
     top:70px;
     height: calc(100vh - 70px);
     overflow: scroll;
-    background-color: white;
+    background-color: themed('bgSoft');
     
     &::-webkit-scrollbar{
         display: none;
@@ -17,9 +19,11 @@
         -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
         -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
         padding: 20px;
-        margin-bottom: 20pxS;
+        margin-bottom: 20px;
+        background-color: themed('bg');
+
         span{
-            color: grey;
+            color: themed('textColorsoft');
         }
         .user{
             display: flex;
@@ -54,7 +58,7 @@
                 }
                 span{
                     font-weight: 500;
-                    color: black;
+                    color: themed('textColor');
                 }
             }
             
@@ -80,4 +84,5 @@
         }
       }
     }
+}
 }
