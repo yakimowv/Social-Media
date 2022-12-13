@@ -7,13 +7,13 @@ import Profile from "./pages/Profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
 import Leftbar from "./components/Leftbar/Leftbar";
 import Rightbar from "./components/Rightbar/Rightbar";
-import { ProtectRoute } from "./guards/ProtectRoute";
+import ProtectRoute  from "./guards/ProtectRoute";
 import './style.scss'
 import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
   const {darkMode}=useContext(DarkModeContext)
-  console.log(darkMode)
+
 
   const Layout = () => {
     return (
