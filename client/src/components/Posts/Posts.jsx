@@ -12,7 +12,7 @@ export default function Posts() {
           id: 1,
           name: 'Valeri Yakimov',
           userId:1,
-          profilePicture:'https://play-lh.googleusercontent.com/BMryS7Cn454jIAVrchF9as-7WOG07H97Lugr62ISdJSo7wj1cC-0MTUm3SqSZffc7IQ',
+          profilePicture:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCkRKGH_zZnRgUP8gpRBXGt6Y7nAzmE5giWA&usqp=CAU',
           desc: 'Driving my BMW',
           img: 'https://i.pinimg.com/originals/3f/00/63/3f0063f63e25a727ef8ca7b02e4fc84e.jpg'
       },
@@ -20,7 +20,7 @@ export default function Posts() {
           id: 2,
           name: 'Robby the Lobster',
           userId:1,
-          profilePicture:'https://static.wikia.nocookie.net/spuzva-bob-skockani/images/3/37/Mr_krabs.jpg/revision/latest?cb=20180903171107&path-prefix=hr',
+          profilePicture:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ZU0W4Br4fGjCjdW9UaNXHiGrP-YBZfiYw9XU2MfbVaismhRj9XYnIuT_-jZQ3Xz0cuY&usqp=CAU',
           desc: 'Nacepin',
           img: 'https://thespongeclub.com/wp-content/uploads/2022/07/Larry-the-Lobster-Guide.png'
       },
