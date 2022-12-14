@@ -1,11 +1,8 @@
-import React, { useContext } from 'react'
-import {AuthContext} from '../../context/authContext'
 import PostMapping from './PostMapping'
 import './Posts.scss'
 
 
 export default function Posts() {
-  const {currentUser} = useContext(AuthContext)
     //DATA TO DELETE
     const posts = [
       {

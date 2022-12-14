@@ -9,7 +9,16 @@
         overflow: scroll;
         background-color: themed('bg');
         color: themed('textColor');
-
+        
+        @include mobile{
+            display: none;
+         }
+         @include tablet{
+            display: none;
+         }
+        //  @include secondTablet{
+        //     flex: 2;
+        //  }
         &::-webkit-scrollbar {
             display: none;
         }

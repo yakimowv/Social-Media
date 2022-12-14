@@ -19,7 +19,7 @@ export default function PostMapping({ post }) {
             <div className="container">
                 <div className="user">
                     <div className="userInfo">
-                        <img src={post.profilePicture} alt='profile picture' />
+                        <img src={post.profilePicture} alt='Profile' />
                         <div className="details">
                             <Link to={`/profile/${post.userId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <span className='name'>{post.name}</span>
@@ -31,7 +31,7 @@ export default function PostMapping({ post }) {
                 </div>
                 <div className="content">
                     <p>{post.desc}</p>
-                    <img src={post.img} alt='Post image' />
+                    <img src={post.img} alt='Post' />
                 </div>
                 <div className="info">
                     <div className="item">

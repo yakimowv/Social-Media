@@ -7,12 +7,22 @@
     height: calc(100vh - 70px);
     overflow: scroll;
     background-color: themed('bgSoft');
+    @include mobile{
+        display: none;
+     }
+     @include tablet{
+        display: none;
+     }
+    
     
     &::-webkit-scrollbar{
         display: none;
     }
     .container{
       padding: 20px;
+      @include secondTablet {
+        padding: 0px;
+      }
       
       .item{
         box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.09);
@@ -24,6 +34,9 @@
 
         span{
             color: themed('textColorsoft');
+            @include secondTablet {
+                font-size: 10px;
+            }
         }
         .user{
             display: flex;
@@ -55,6 +68,9 @@
 
                 p{
                     color: gray;
+                    @include secondTablet {
+                        font-size: 10px;
+                    }
                 }
                 span{
                     font-weight: 500;
@@ -66,12 +82,19 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                @include secondTablet {
+                   margin-left: 10px;
+                }
+
 
                 button{
                     border: none;
                     padding: 5px;
                     color: white;
                     cursor: pointer;
+                    @include secondTablet {
+                        font-size: 10px;
+                    }
 
                     &:first-child{
                         background-color: #5271ff;

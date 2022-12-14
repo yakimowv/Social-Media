@@ -14,31 +14,33 @@ import { AuthContext } from "../../context/authContext";
 
 
 export default function Navbar() {
-	const {currentUser}=useContext(AuthContext)
-	const {toggle, darkMode}=useContext(DarkModeContext)
+	const { currentUser } = useContext(AuthContext)
+	const { toggle, darkMode } = useContext(DarkModeContext)
 
 	return (
 		<div className='navbar'>
 			<div className='left'>
-				<Link to='/'style={{textDecoration:'none'}}>
+				<Link to='/' style={{ textDecoration: 'none' }}>
 					<span>neotericsocial</span>
 				</Link>
-				<HomeOutlinedIcon/>
-				{darkMode ?<WbSunnyOutlinedIcon onClick={toggle} /> : <DarkModeOutlinedIcon  onClick={toggle}/>}
-				<GridViewOutlinedIcon/>
+				<HomeOutlinedIcon />
+				{darkMode ? <WbSunnyOutlinedIcon onClick={toggle} /> : <DarkModeOutlinedIcon onClick={toggle} />}
+				<GridViewOutlinedIcon />
 				<div className="search">
-					<SearchOutlinedIcon/>
+					<SearchOutlinedIcon />
 					<input type="text" placeholder='Search....' />
 				</div>
 			</div>
 			<div className='right'>
-				<PersonOutlineOutlinedIcon/>
-				<EmailOutlinedIcon/>
-				<NotificationsNoneOutlinedIcon/>
-				<div className="user">
-					<img src={currentUser.profilePicture} alt=''/>
-					<span>{currentUser.name}</span>
-				</div>
+				<PersonOutlineOutlinedIcon />
+				<EmailOutlinedIcon />
+				<NotificationsNoneOutlinedIcon />
+				<Link to={'/profile/123213'} style={{ textDecoration: 'none' }}>
+					<div className="user" >
+						<img src={currentUser.profilePicture} alt='' />
+						<span>{currentUser.name}</span>
+					</div>
+				</Link>
 			</div>
 		</div>
 	)
