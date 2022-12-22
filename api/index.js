@@ -1,5 +1,6 @@
 import express from "express";
 import cors from 'cors'
+import cookieParser from "cookie-parser";
 
 import userRouter from './routes/users.js'
 import postsRouter from './routes/posts.js'
@@ -10,8 +11,9 @@ import authRouter from './routes/auth.js'
 const app = express()
 
 //Middlewares
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+app.use(cookieParser());
 
 //EVERY ROUTS
 app.use('/api/auth', authRouter)
