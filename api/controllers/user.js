@@ -1,3 +1,4 @@
-exports.getUser= function(req,res){
-    //TODO FIX EXPORTS 
+export const getUser=(req,res)=>{
+   res.send('ok')
 }
+

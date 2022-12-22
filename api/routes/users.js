@@ -1,7 +1,4 @@
-const { getUser } = require('../controllers/user')
+import express from 'express'
+const router =express.Router()
 
-const router = require('express').Router()
-
-router.get('/find/:userId',getUser)
-
-module.exports = router
+export default router
