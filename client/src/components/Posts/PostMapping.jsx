@@ -7,6 +7,7 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import { Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
 import { useState } from 'react';
+import moment from 'moment';
 
 export default function PostMapping({ post }) {
     const [commentOpen,setCommentOpen]=useState(false)
@@ -24,14 +25,14 @@ export default function PostMapping({ post }) {
                             <Link to={`/profile/${post.userId}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                                 <span className='name'>{post.name}</span>
                             </Link>
-                            <span className='date'>1 min ago</span>
+                            <span className='date'>{moment(post.createdAt).fromNow()}</span>
                         </div>
                     </div>
                     <MoreHorizOutlinedIcon />
                 </div>
                 <div className="content">
                     <p>{post.desc}</p>
-                    <img src={post.img} alt='Post' />
+                    <img src={'./upload/' + post.img} alt='Post' />
                 </div>
                 <div className="info">
                     <div className="item">
@@ -49,7 +50,7 @@ export default function PostMapping({ post }) {
                         Share
                     </div>
                 </div>
-                {commentOpen && <Comments/>}
+                {commentOpen && <Comments postId={post.id}/>}
             </div>
         </div>
     )

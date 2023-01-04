@@ -22,27 +22,27 @@ export default function Leftbar() {
       <div className="container">
         <div className='menu'>
           <div className='user'>
-            <img src={currentUser.profilePicture} alt='profile picture' />
+            <img src={currentUser.profilePicture} alt='profile' />
             <span>{currentUser.name}</span>
           </div>
           <div className='item'>
-            <img src={Friends} alt='Friends img' />
+            <img src={Friends} alt='Friends' />
             <span>Friends</span>
           </div>
           <div className='item'>
-            <img src={Groups} alt='Groups img' />
+            <img src={Groups} alt='Groups' />
             <span>Groups</span>
           </div>
           <div className='item'>
-            <img src={Market} alt='MarketPlace img' />
+            <img src={Market} alt='MarketPlace' />
             <span>MarketPlace</span>
           </div>
           <div className='item'>
-            <img src={Watch} alt='Watch img' />
+            <img src={Watch} alt='Watch' />
             <span>Watch</span>
           </div>
           <div className='item'>
-            <img src={Memories} alt='Memories img' />
+            <img src={Memories} alt='Memories' />
             <span>Memories</span>
           </div>
         </div>
@@ -50,23 +50,23 @@ export default function Leftbar() {
         <div className="menu">
           <span>Your shortcuts</span>
           <div className='item'>
-            <img src={Events} alt='Events img' />
+            <img src={Events} alt='Events' />
             <span>Events</span>
           </div>
           <div className='item'>
-            <img src={Gaming} alt='Gaming img' />
+            <img src={Gaming} alt='Gaming' />
             <span>Gaming</span>
           </div>
           <div className='item'>
-            <img src={Gallery} alt='Gallery img' />
+            <img src={Gallery} alt='Gallery' />
             <span>Gallery</span>
           </div>
           <div className='item'>
-            <img src={Videos} alt='Videos img' />
+            <img src={Videos} alt='Videos' />
             <span>Videos</span>
           </div>
           <div className='item'>
-            <img src={Messages} alt='Messages img' />
+            <img src={Messages} alt='Messages' />
             <span>Messages</span>
           </div>
         </div>
@@ -74,15 +74,15 @@ export default function Leftbar() {
         <div className="menu">
         <span>Others</span>
         <div className='item'>
-            <img src={Fund} alt='Fund img' />
+            <img src={Fund} alt='Fund' />
             <span>Fundralser</span>
           </div>
           <div className='item'>
-            <img src={Tutorials} alt='Tutorials img' />
+            <img src={Tutorials} alt='Tutorials' />
             <span>Tutorials</span>
           </div>
           <div className='item'>
-            <img src={Courses} alt='Courses img' />
+            <img src={Courses} alt='Courses' />
             <span>Courses</span>
           </div>
         </div>
