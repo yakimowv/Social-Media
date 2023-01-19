@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import './Register.scss'
+import { AuthContext } from '../../context/authContext'
 //TODO make style to error
 export default function Register() {
 	const navigate = useNavigate()
+	const {login} =useContext(AuthContext)
 	const [inputs, setInputs] = useState({
 		username: '',
 		email: '',
@@ -23,11 +25,14 @@ export default function Register() {
 		e.preventDefault()
 		try {
 			await axios.post('http://localhost:3333/api/auth/register', inputs)
-			navigate('/')
-		} catch (err) {
-			setError(err.response.data)
+			login(inputs)
+			navigate(`/home`)
+		} catch (error) {
+			setError(error.response.data)
 		}
 	}
+	
+
 	return (
 		<div className='register'>
 			<div className='card'>

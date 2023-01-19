@@ -49,8 +49,8 @@ export default function Comments({postId}) {
         </div>
         {isLoading 
         ? `Loalding...`
-        : data.map(comment=>(
-            <div className='comment'>
+        : data.map( comment =>(
+            <div className='comment' key={comment.id}>
                 <img src={comment.profilePicture} alt='Profile'/>
                 <div className="info">
                     <span>{comment.name}</span>

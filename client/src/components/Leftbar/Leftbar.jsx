@@ -12,17 +12,34 @@ import Messages from "../../assets/10.png";
 import Tutorials from "../../assets/11.png";
 import Courses from "../../assets/12.png";
 import Fund from "../../assets/13.png";
+import Logout from "../../assets/14.png";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 
 export default function Leftbar() {
-  const {currentUser}=useContext(AuthContext)
+  const {currentUser, logout}=useContext(AuthContext)
+  const [err,setErr]= useState(null)
+
+
+  
+  const logoutHandler = async(e)=>{
+    e.preventDefault()
+    try{
+       await logout()
+    }catch(err){
+      setErr(err.response.data);
+    }
+    console.log(err)
+  }
   return (
     <div className='leftbar'>
       <div className="container">
         <div className='menu'>
           <div className='user'>
-            <img src={currentUser.profilePicture} alt='profile' />
+            <img src={"/upload/"+currentUser.profilePicture} alt='profile' />
             <span>{currentUser.name}</span>
           </div>
           <div className='item'>
@@ -86,6 +103,13 @@ export default function Leftbar() {
             <span>Courses</span>
           </div>
         </div>
+        <hr/>
+        <div className='logout'>
+            <img src={Logout} alt='Logout' />
+            <Link to={'/login'} style={{textDecoration:'none'}}>
+            <span onClick={logoutHandler}>LOG OUT</span>
+            </Link>
+          </div>
       </div>
     </div>
   )

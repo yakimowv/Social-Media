@@ -21,9 +21,10 @@ export default function Login() {
 		e.preventDefault();
 		try {
 			await login(inputs);
-			navigate('/')
+			navigate(`/home`)
 		} catch (error) {
 			setError(error.response.data);
+			console.log(error)
 		}
 	};
 	return (
@@ -47,7 +48,7 @@ export default function Login() {
 						<input type="text" placeholder='Username' name='username' onChange={handleChange} />
 						<input type="password" placeholder='Password' name='password' onChange={handleChange} />
 						<button onClick={handleLogin}>Login</button>
-						<p>{error && error}</p>
+						<p className='error'>{error && error}</p>
 					</form>
 				</div>
 			</div>

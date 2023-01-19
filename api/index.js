@@ -8,6 +8,7 @@ import postsRouter from './routes/posts.js'
 import likesRouter from './routes/likes.js'
 import commentsRouter from './routes/comments.js'
 import authRouter from './routes/auth.js'
+import relRouter from './routes/relationship.js'
 
 const app = express()
 
@@ -46,6 +47,7 @@ app.use('/api/users', userRouter)
 app.use('/api/posts', postsRouter)
 app.use('/api/likes', likesRouter)
 app.use('/api/comments', commentsRouter)
+app.use('/api/relation', relRouter) 
 
 //STARTING APP
 app.listen(3333, () => {

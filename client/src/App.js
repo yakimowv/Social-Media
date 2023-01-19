@@ -49,6 +49,10 @@ function App() {
           element: <Home />,
         },
         {
+          path: '/home',
+          element:<Home/>,
+        },
+        {
           path: "/profile/:id",
           element: <Profile />,
         },
@@ -59,9 +63,9 @@ function App() {
       element: <Login />,
     },
     {
-      path: "register",
+      path: "/register",
       element: <Register />,
-    },
+    }
   ]);
 
   return (

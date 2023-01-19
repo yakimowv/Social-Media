@@ -23,7 +23,6 @@ const Share = () => {
   };
 
   const { currentUser } = useContext(AuthContext);
-  console.log(currentUser.profilePicture)
 
   const queryClient = useQueryClient();
 
@@ -53,8 +52,7 @@ const Share = () => {
       <div className="container">
         <div className="top">
           <div className="left">
-            {/* <img src={"/upload/" + currentUser.profilePicture} alt="" /> */}
-            <img src={currentUser.profilePicture} alt="" />
+            <img src={"/upload/"+currentUser.profilePicture} alt="" />
             <input
               type="text"
               placeholder={`What's on your mind ${currentUser.name}?`}

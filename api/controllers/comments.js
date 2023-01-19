@@ -15,7 +15,6 @@ export const getComments = (req, res) => {
         WHERE c.postId = ?
         ORDER BY c.createdAt DESC`
 
-     // WHERE (r.followerUserId = ? OR p.userId = ?)
         db.query(q,[req.query.postId],(err,data)=>{
             if (err) return res.status(500).json(err)
             return res.status(200).json(data)

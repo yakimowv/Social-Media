@@ -35,9 +35,9 @@ export default function Navbar() {
 				<PersonOutlineOutlinedIcon />
 				<EmailOutlinedIcon />
 				<NotificationsNoneOutlinedIcon />
-				<Link to={'/profile/123213'} style={{ textDecoration: 'none' }}>
+				<Link to={`/profile/${currentUser.id}`} style={{ textDecoration: 'none' }}>
 					<div className="user" >
-						<img src={currentUser.profilePicture} alt='' />
+						<img src={"/upload/"+currentUser.profilePicture} alt='' />
 						<span>{currentUser.name}</span>
 					</div>
 				</Link>
